@@ -1,0 +1,23 @@
+1 testinfo:
+ 2       - id: test_login001
+ 3         title: 登录测试
+ 4         info: 打开九江银行系统登录首页
+ 5 testcase:
+ 6       - element_info: username
+ 7         find_type: ID
+ 8         operate_type: send_keys
+ 9         info: 输入用户名
+10       - element_info: password
+11         find_type: ID
+12         operate_type: send_keys
+13         info: 输入密码
+18       - element_info: //button[@type='submit']
+19         find_type: XPATH
+20         operate_type: click
+21         info: 单击登录按钮
+34 check:
+35       - element_info: //span[text()='欢迎您，管理员']
+36         find_type: XPATH
+37         info: 检查是否进入了首页
+
+login.yaml
